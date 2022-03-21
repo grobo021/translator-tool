@@ -1,0 +1,25 @@
+{
+	"name": "ATL Marathon Project",
+	"version": "0.0.1",
+	"manifest_version": 3,
+	"background": {
+		"service_worker": "background/background.js"
+	},
+	"permissions": ["tabs"],
+	"action": {
+		"default_popup": "popup/popup.html",
+		"default_icon": {
+			"128": "icons/logo.png"
+		}
+	},
+	"icons": {
+		"128": "icons/logo.png"
+	},
+	"content_scripts": [
+		{
+			"matches": ["http://*/*", "https://*/*"],
+            "css": ["content/content.css"],
+			"js": ["content/content.js"]
+		}
+	]
+}
